@@ -1,0 +1,2 @@
+#!/bin/bash
+sqlacodegen "mysql+mysqlconnector://root:${mysql_pw}@${mysql_svr}/customers"  --outfile ${mysql1_apidir}/models.py

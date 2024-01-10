@@ -1,0 +1,443 @@
+redis-cli is installed
+jq is installed
+zip is installed
+/opt/mssql-tools18/bin/sqlcmd is installed
+mysql is installed
+psql is installed
+pip is installed
+gunicorn is installed
+gcloud is installed
+****************
+Bringing up Servers in Docker
+****************
+****************
+Bringing up Server
+****************
+redis-cli is installed
+jq is installed
+zip is installed
+/opt/mssql-tools18/bin/sqlcmd is installed
+mysql is installed
+psql is installed
+pip is installed
+gunicorn is installed
+gcloud is installed
+docker stop mysql1
+docker rm mysql1
+mysql1_loc_dir=/data/school/MIDS/sql_server_work/sql_data_files/mysql/mysql1
+Changing permissions on $mysql1_loc_dir
+backup_dir=/data/school/MIDS/sql_server_work/backups_sql_df/mysql/mysql1/20231110
+Changing permissions on $backup_dir
+mkdir: created directory '/data/school/MIDS/sql_server_work/sql_data_files/mysql/mysql1'
+mysql1_loc_dir=/data/school/MIDS/sql_server_work/sql_data_files/mysql/mysql1
+Changing permissions on $mysql1_loc_dir
+mysql1_pwd=Python2028
+about to create docker
+eebac81e971033a0527418f5f18a301080e71195fc5534888e6a3823e5f679b3
+updating firewall rules for port:3306
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+mkdir: created directory '/data/school/MIDS/sql_server_work/cnctr/mysql'
+my_sql_up=mysql -h 127.0.0.1 -u root -p'Python2028' -e'SHOW PROCESSLIST'
+cf=/data/school/MIDS/sql_server_work/cnctr/mysql/mysql1.sh
+mysql -h 127.0.0.1 -u root -p'Python2028'
+************************
+Setting Up Fastapi connectors
+************************
+cf=/data/school/MIDS/sql_server_work/fastapi/customers/connector.py
+cf=/data/school/MIDS/sql_server_work/fastapi/customers/genmodel.sh
+cf=/data/school/MIDS/sql_server_work/fastapi/customers/run.sh
+************************
+Setting Up Symlinks
+************************
+****************
+Bringing up Server
+****************
+redis-cli is installed
+jq is installed
+zip is installed
+/opt/mssql-tools18/bin/sqlcmd is installed
+mysql is installed
+psql is installed
+pip is installed
+gunicorn is installed
+gcloud is installed
+docker stop mssql1
+docker rm mssql1
+mssql1_loc_dir=/data/school/MIDS/sql_server_work/sql_data_files/mssql/mssql1
+Changing permissions on $mssql1_loc_dir
+backup_dir=/data/school/MIDS/sql_server_work/backups_sql_df/mssql/mssql1/20231110
+Changing permissions on $backup_dir
+mkdir: created directory '/data/school/MIDS/sql_server_work/sql_data_files/mssql/mssql1'
+mssql1_pwd=Python2028
+about to create docker
+2439c367158ddc2215fc68f03d65bd4f1a4a15c6cbafc76a4f7b071a25daa2fc
+updating firewall rules for port:1433
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+mkdir: created directory '/data/school/MIDS/sql_server_work/cnctr/mssql'
+cf=/data/school/MIDS/sql_server_work/cnctr/mssql/mssql1.sh
+/opt/mssql-tools18/bin/sqlcmd -S 127.0.0.1 -U SA -P Python2028 -C
+************************
+Setting Up Fastapi connectors
+************************
+cf=/data/school/MIDS/sql_server_work/fastapi/products/connector.py
+cf=/data/school/MIDS/sql_server_work/fastapi/products/genmodel.sh
+cf=/data/school/MIDS/sql_server_work/fastapi/products/run.sh
+************************
+Setting Up Symlinks
+************************
+****************
+Bringing up Server
+****************
+redis-cli is installed
+jq is installed
+zip is installed
+/opt/mssql-tools18/bin/sqlcmd is installed
+mysql is installed
+psql is installed
+pip is installed
+gunicorn is installed
+gcloud is installed
+docker stop postsql1
+docker rm postsql1
+postsql1_loc_dir=/data/school/MIDS/sql_server_work/sql_data_files/postsql/postsql1
+Changing permissions on $postsql1_loc_dir
+backup_dir=/data/school/MIDS/sql_server_work/backups_sql_df/postsql/postsql1/20231110
+Changing permissions on $backup_dir
+mkdir: created directory '/data/school/MIDS/sql_server_work/sql_data_files/postsql/postsql1'
+postsql1_pwd=Python2028
+about to create docker
+b9665ad4bd947bb4606616faab4d0557140fa94acecf776aca29228813375f11
+updating firewall rules for port:5432
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+mkdir: created directory '/data/school/MIDS/sql_server_work/cnctr/postsql'
+cf=/data/school/MIDS/sql_server_work/cnctr/postsql/postsql1.sh
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432'
+postsql1_up=PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -c'SELECT version()' >/dev/null
+************************
+Setting Up Fastapi connectors
+************************
+cf=/data/school/MIDS/sql_server_work/fastapi/finance/connector.py
+cf=/data/school/MIDS/sql_server_work/fastapi/finance/genmodel.sh
+cf=/data/school/MIDS/sql_server_work/fastapi/finance/run.sh
+************************
+Setting Up Symlinks
+************************
+****************
+Bringing up Server
+****************
+redis-cli is installed
+jq is installed
+zip is installed
+/opt/mssql-tools18/bin/sqlcmd is installed
+mysql is installed
+psql is installed
+pip is installed
+gunicorn is installed
+gcloud is installed
+redis stop redis
+redis rm redis
+about to create redis
+fcafa6be9d6d19494f587298e1bd9d4e750652e36ee76e7aa3c28fbc4c74fefb
+updating firewall rules for port:6379
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+****************
+Looking at servers in docker
+****************
+****************
+Looking looking at mssql1
+****************
+docker ps -a --filter "name=mssql1" 
+CONTAINER ID   IMAGE                                        COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+2439c367158d   mcr.microsoft.com/mssql/server:2022-latest   "/opt/mssql/bin/perm…"   9 seconds ago   Up 8 seconds   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   mssql1
+****************
+Looking looking at mysql1
+****************
+docker ps -a --filter "name=mysql1" 
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
+eebac81e9710   mysql:latest   "docker-entrypoint.s…"   11 seconds ago   Up 10 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   mysql1
+****************
+Looking looking at postsql1
+****************
+docker ps -a --filter "name=postsql1" 
+CONTAINER ID   IMAGE      COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+b9665ad4bd94   postgres   "docker-entrypoint.s…"   6 seconds ago   Up 5 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   postsql1
+****************
+Looking looking at redis
+****************
+docker ps -a --filter "name=redis" 
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+fcafa6be9d6d   redis:alpine   "docker-entrypoint.s…"   4 seconds ago   Up 3 seconds   0.0.0.0:6379->6379/tcp, :::6379->6379/tcp   redis
+****************
+Checking if database servers are up
+****************
+
+****************
+All databases servers up
+****************
+
+****************
+Setting up databases
+****************
+Changed database context to 'products'.
+Changed database context to 'products'.
+Msg 1769, Level 16, State 1, Server mssql1, Line 1
+Foreign key 'FK_ProductType' references invalid column 'product_type' in referencing table 'products'.
+Msg 1750, Level 16, State 1, Server mssql1, Line 1
+Could not create constraint or index. See previous errors.
+Changed database context to 'products'.
+Changed database context to 'products'.
+CREATE DATABASE
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+You are now connected to database "finance" as user "postgres".
+CREATE TABLE
+BigQuery error in mk operation: Dataset 'brave-sonar-367918:site_traffic'
+already exists.
+Replaced brave-sonar-367918.site_traffic.product_views
+
+Namespace(Action='setup_dbs', inputfile=None, outfile=None)
+Action is : setup_dbs
+****************************************
+COMING IN HERE
+****************************************
+********************
+mssql1
+products
+********************
+/opt/mssql-tools18/bin/sqlcmd -S 127.0.0.1 -U SA -P Python2028 -C -i /data/school/MIDS/sql_server_work/dbs/servers/mssql/mssql1/dbs/products/create_db/create_db.sql
+/opt/mssql-tools18/bin/sqlcmd -S 127.0.0.1 -U SA -P Python2028 -C -i /data/school/MIDS/sql_server_work/dbs/servers/mssql/mssql1/dbs/products/schemas/dbo/tables/dbo.product_type.sql
+/opt/mssql-tools18/bin/sqlcmd -S 127.0.0.1 -U SA -P Python2028 -C -i /data/school/MIDS/sql_server_work/dbs/servers/mssql/mssql1/dbs/products/schemas/dbo/tables/dbo.products.sql
+/opt/mssql-tools18/bin/sqlcmd -S 127.0.0.1 -U SA -P Python2028 -C -i /data/school/MIDS/sql_server_work/dbs/servers/mssql/mssql1/dbs/products/schemas/dbo/tables/dbo.product_price_history.sql
+/opt/mssql-tools18/bin/sqlcmd -S 127.0.0.1 -U SA -P Python2028 -C -i /data/school/MIDS/sql_server_work/dbs/servers/mssql/mssql1/dbs/products/schemas/dbo/tables/dbo.product_price.sql
+****************************************
+COMING IN HERE
+****************************************
+********************
+mysql1
+customers
+********************
+mysql -h 127.0.0.1 -u root -p'Python2028' < /data/school/MIDS/sql_server_work/dbs/servers/mysql/mysql1/dbs/customers/create_db/create_db.sql
+mysql -h 127.0.0.1 -u root -p'Python2028' < /data/school/MIDS/sql_server_work/dbs/servers/mysql/mysql1/dbs/customers/schemas/customers/tables/customer_info.sql
+mysql -h 127.0.0.1 -u root -p'Python2028' < /data/school/MIDS/sql_server_work/dbs/servers/mysql/mysql1/dbs/customers/schemas/customers/tables/customer_product.sql
+mysql -h 127.0.0.1 -u root -p'Python2028' < /data/school/MIDS/sql_server_work/dbs/servers/mysql/mysql1/dbs/customers/schemas/customers/tables/customer_product_history.sql
+****************************************
+COMING IN HERE
+****************************************
+********************
+postsql1
+finance
+********************
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/create_db/create_db.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/geo_city_population.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/fin_account_activity.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/fin_gl_accounts.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/fin_distro_channel.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/geo_postalcode_to_county_state.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/geo_geography.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/fin_distro_partner.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/fin_distro_channel_group.sql
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/dbs/servers/postsql/postsql1/dbs/finance/schemas/public/tables/geo_population_by_postalcode.sql
+****************************************
+COMING IN HERE
+****************************************
+********************
+bigquery1
+customer_traffic
+********************
+ bq --location=US mk --dataset brave-sonar-367918:site_traffic 
+bq query --use_legacy_sql=false  < /data/school/MIDS/sql_server_work/dbs/servers/bigquery/bigquery1/dbs/customer_traffic/schemas/dbo/tables/dbo.product_views.sql
+****************
+setup complete
+****************
+****************
+Populating Databases
+****************
+You are now connected to database "finance" as user "postgres".
+INSERT 0 32
+You are now connected to database "finance" as user "postgres".
+INSERT 0 1
+INSERT 0 1
+INSERT 0 2
+INSERT 0 5
+INSERT 0 7
+INSERT 0 5
+You are now connected to database "finance" as user "postgres".
+INSERT 0 16589
+Namespace(Action='populate_dbs', inputfile=None, outfile=None)
+Action is : populate_dbs
+Database : products, Connection Good: True
+****************************************
+product_type
+****************************************
+****************************************
+products
+****************************************
+****************************************
+product_price
+****************************************
+****************************************
+product_price_history
+****************************************
+Database : finance, Connection Good: True
+****************************************
+geo_geography
+****************************************
+****************************************
+fin_gl_accounts
+****************************************
+****************************************
+fin_distro_channel
+****************************************
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/db_artifacts/postsql/queries/finance/populate_fin_distro_channel.sql
+****************************************
+fin_distro_channel_group
+****************************************
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/db_artifacts/postsql/queries/finance/populate_fin_distro_channel_group.sql
+****************************************
+geo_postalcode_to_county_state
+****************************************
+****************************************
+geo_population_by_postalcode
+****************************************
+****************************************
+fin_distro_partner
+****************************************
+****************************************
+geo_city_population
+****************************************
+PGPASSWORD=Python2028 psql -h 127.0.0.1 -U postgres -p'5432' -f /data/school/MIDS/sql_server_work/db_artifacts/postsql/queries/finance/populate_geo_city_population.sql
+Database : customers, Connection Good: True
+****************************************
+customer_info
+****************************************
+Database : finance, Connection Good: True
+****************************************
+customer_product
+****************************************
+Database : products, Connection Good: True
+****************************************
+customer_product_history
+****************************************
+mysql -h 127.0.0.1 -u root -p'Python2028' < /data/school/MIDS/sql_server_work/db_artifacts/mysql/queries/customers/populate_customer_product_history.sql
+****************************************
+fin_account_activity
+****************************************
+Database : finance, Connection Good: True
+Database : customers, Connection Good: True
+Database : products, Connection Good: True
+****************
+Database Population Complete
+****************
+****************
+Trying to bring up fastapi models
+****************
+****************
+Pydantic fastapi up
+****************
+****************
+Spinning up FASTAPI front-ends
+****************
+redis-cli is installed
+jq is installed
+zip is installed
+/opt/mssql-tools18/bin/sqlcmd is installed
+mysql is installed
+psql is installed
+pip is installed
+gunicorn is installed
+gcloud is installed
+pid_to_kill=13395
+13400
+pid_to_kill=13397
+13401
+pid_to_kill=13399
+13402
+pid_to_kill=13520
+13542
+pid_to_kill=13558
+0
+0
+0
+*************************************
+ Waiting for URL to be up:
+ http://127.0.0.1:8023/docs 
+*************************************
+*********************************
+*  FastAPI Up:                   *
+   http://127.0.0.1:8023/docs
+*                                *
+*********************************
+*************************************
+ Waiting for URL to be up:
+ http://127.0.0.1:8024/docs 
+*************************************
+*********************************
+*  FastAPI Up:                   *
+   http://127.0.0.1:8024/docs
+*                                *
+*********************************
+*************************************
+ Waiting for URL to be up:
+ http://127.0.0.1:8025/docs 
+*************************************
+*********************************
+*  FastAPI Up:                   *
+   http://127.0.0.1:8025/docs
+*                                *
+*********************************
+****************
+Completed up FASTAPI front-ends
+****************
+****************
+Spinning up DASHBOARD
+****************
+redis-cli is installed
+jq is installed
+zip is installed
+/opt/mssql-tools18/bin/sqlcmd is installed
+mysql is installed
+psql is installed
+pip is installed
+gunicorn is installed
+gcloud is installed
+pid_to_kill=
+************************
+Setting Up Symlinks
+************************
+cf=/data/school/MIDS/sql_server_work/dashboard/run_dashboard.sh
+cf=/data/school/MIDS/sql_server_work/dashboard/run_jn.sh
+
+*********************************
+Waiting for Dashboard to come up:
+http://127.0.0.1:8026
+*********************************

@@ -1,0 +1,49 @@
+<style>
+  .on_top_always {
+    z-index: 999 !important;
+  }
+  
+  </style>
+
+
+  <div id="dataset_container">
+
+                          <h1>
+                          <!--Displaying the converted table-->
+                            {% for table in tables %}
+                            <h2>{{titles[loop.index]}}</h2>							
+                            {{ table|safe }}
+                            {% endfor %}	
+                          </h1>
+                          
+
+<script>
+    $(document).ready(function () {
+
+
+    $("#dataset_table_parent table.dataframe").attr("class","display");
+    $("#dataset_table_parent table.display").attr("border","0");
+    $("#dataset_table_parent table.display").attr("style","width:100%");
+    $("#dataset_table_parent table.display").attr("id","mydataframe");
+
+    $("#mydataframe").dataTable( {
+      "columns": [
+        null,
+        { "width": "15%" },
+        { "width": "15%" },
+        null,
+        null,
+        null, 
+        null,
+        null
+      ],
+      "columnDefs": [
+    { "visible": false, "targets": 1 }
+  ],
+      "buttons": [
+          'copy', 'csv', 'excel', 'pdf', 'print'
+      ]        
+    } );
+
+
+  </script>   

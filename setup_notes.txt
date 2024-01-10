@@ -1,0 +1,54 @@
+
+Setting up sql client on Ubuntu 22.04 LTS.
+#Getting it to work on 22.04:
+https://askubuntu.com/questions/1407533/microsoft-odbc-v18-is-not-find-by-apt
+
+#all users
+https://dba.stackexchange.com/questions/174277/getting-/opt/mssql-tools18/bin/sqlcmd-/opt/mssql-tools18/bin/sqlcmd-command-not-found-in-linux
+
+This is not the greatest no help with 22.04
+https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash
+
+Docker container sql server setup.
+https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure?view=sql-server-ver16&pivots=cs1-bash
+the link says you need to run the docker run as sa -- inaccurate.
+
+#Azure Data Studio
+https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16&tabs=ubuntu-install%2Credhat-uninstall
+
+
+#mysql client
+sudo apt install libmysqlclient-de
+
+#problems with mysql
+('IM002', '[IM002] [unixODBC][Driver Manager]Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+
+https://dev.mysql.com/downloads/connector/python/
+
+
+#postgress sql client:
+sudo apt-get install -y postgresql-client
+#required for psycopg2
+https://stackoverflow.com/questions/61528483/error-pg-config-executable-not-found-i-try-to-pip3-psycopg2-with-python3-7
+
+
+
+#pgadmin on linux
+https://www.pgadmin.org/download/pgadmin-4-apt/
+
+#Start Through UI.
+
+
+#Notes-- ToDo:
+
+#Update setup bash-script to install everything needed on new box.
+
+#remember to set up thisp path
+/opt/mssql-tools18/bin
+
+
+#docker notes even after setup this error#
+https://phoenixnap.com/kb/docker-permission-denied
+
+be sure to run:
+newgrp docker -- as the current user
